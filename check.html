@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Checkout</title>
+    <script type="text/javascript" src="https://pay.conekta.com/v1.0/js/conekta-checkout.min.js" integrity="sha384-SutNwgD4KkoUOiJtAA/I3sfcNutLJL4kTi2EhmwPoc9lJ2/JUOgrjxY3YoEmpiAt%" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="conektaIframeContainer" style="height: 700px;"></div>
+    <script type="text/javascript">
+    window.ConektaCheckoutComponents.Integration({
+        targetIFrame: "#conektaIframeContainer",
+        checkoutRequestId: "3e5b611c-871e-4dea-81e5-f1023cdfb077", // checkout request id
+        publicKey: "public_api_key_eLI6dZw4ubACoHX14pfZKBG",
+        options: {},
+        styles: {},
+        onFinalizePayment: function(event){
+            console.log(event);
+        }
+    })
+    </script>
+</body>
+</html>
